@@ -1,0 +1,6 @@
+{
+    "require": {
+        "robmorgan/phinx": "^0.10.3",
+        "grrr-amsterdam/garp-functional": "^2.0"
+    }
+}

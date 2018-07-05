@@ -1,0 +1,15 @@
+INSERT INTO `users` (`id`, `name`, `email`, `description`)
+VALUES
+	(1, 'Karmen', 'karmen@brrr.nl', 'Developer'),
+	(2, 'Helmer', 'helmer@brrr.nl', 'Hoge directeur'),
+	(3, 'Damiro', 'damiro@brrr.nl', 'Medewerker leuke zaken'),
+	(4, 'Gaomi', 'gaomi@brrr.nl', 'Hogere directeur');
+
+
+/*
+public function change() {
+    $this->table('users')
+        ->addColumn('role', 'enum', ['values' => ['manager', 'employee']])
+        ->update();
+}
+*/
