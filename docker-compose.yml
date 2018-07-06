@@ -5,6 +5,7 @@ services:
     build: .
     volumes:
       - .:/the-employees
+    command: bash
 
   database:
     image: mysql:5.7
@@ -13,4 +14,4 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: very-strong!
       MYSQL_DATABASE: the_employees_db
-      
+
