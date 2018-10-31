@@ -1,10 +1,14 @@
 FROM php:7.1
 
-RUN docker-php-ext-install pdo pdo_mysql
+RUN apt-get update && apt-get install -y \
+        zlib1g-dev \
+        unzip
+
+RUN docker-php-ext-install pdo pdo_mysql zip
 
 ENV PATH /the-employees/vendor/bin:$PATH
+ENV COMPOSER_ALLOW_SUPERUSER 1
 
-RUN curl -sS https://getcomposer.org/installer | php && \
-	  mv composer.phar /usr/local/bin/composer
+COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 WORKDIR /the-employees
